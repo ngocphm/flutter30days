@@ -1,6 +1,6 @@
 import 'package:demo1/page/home_page.dart';
 import 'package:demo1/page/login.dart';
-import 'package:demo1/untils/routes.dart';
+import 'package:demo1/untils/myRoutes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
