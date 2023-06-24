@@ -1,6 +1,7 @@
 import 'package:demo1/page/home_page.dart';
 import 'package:demo1/page/login.dart';
 import 'package:demo1/untils/myRoutes.dart';
+import 'package:demo1/widget/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,16 +18,12 @@ class MyApp extends StatelessWidget {
     int days =  30;
     return MaterialApp(
       title: 'Flutter Demo',
-      themeMode: ThemeMode.dark,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      // debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.light,
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
+      debugShowCheckedModeBanner: false,
       // home: homePage(),
-      darkTheme: ThemeData(
-          brightness: Brightness.dark,
-      ),
-      initialRoute: "/",
+      initialRoute: routes.homeRoute,
       //  hoac initiaRoute : routes.loginRoute,
       routes: {
         "/":(context) =>login(),
